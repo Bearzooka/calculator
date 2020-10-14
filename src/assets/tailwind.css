@@ -1,0 +1,88 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+/* Basic style */
+
+.basic-container {
+    @apply bg-gray-800 w-full;
+}
+
+.basic-btn {
+    @apply bg-blue-500 text-white font-bold py-2 px-4 w-1/4;
+  }
+
+.basic-btn:hover {
+    @apply bg-blue-700;
+}
+
+.basic-btn-fn, .basic-btn-top {
+    @apply bg-orange-500 text-white font-bold py-2 px-4 w-1/4;
+}
+
+.basic-btn-fn:hover, .basic-btn-top:hover {
+    @apply bg-orange-700;
+}
+
+.basic-screen {
+    @apply font-thin text-2xl text-gray-800 pl-2 pr-2 font-mono;
+    @apply w-full h-10  bg-gray-200 align-middle text-right mb-2;
+}
+
+.basic-0 {
+    @apply w-1/2 py-2;
+}
+
+.basic-eq {
+    @apply ;
+}
+
+/* Apple Style */
+
+.basic-container {
+    @apply bg-gray-100 w-full;
+}
+
+.apple-btn {
+    @apply bg-gray-600 text-white font-thin py-2 px-4 w-1/4;
+  }
+
+.apple-btn:hover {
+    @apply bg-gray-700 ;
+}
+
+.apple-btn-fn{
+    @apply bg-orange-500 text-white font-thin py-2 px-4 w-1/4;
+}
+
+.apple-btn-fn:hover {
+    @apply bg-orange-700;
+}
+
+.apple-btn-top{
+    @apply bg-gray-700 text-white font-thin py-2 px-4 w-1/4;
+}
+
+.apple-btn-top:hover {
+    @apply bg-gray-900;
+}
+
+.apple-screen {
+    @apply font-thin text-5xl text-gray-200 pl-2 pr-2;
+    @apply w-full h-20  bg-gray-800 align-middle text-right ;
+    @apply rounded-t-md;
+}
+
+.apple-button-row {
+    @apply ;
+}
+
+.apple-0 {
+    @apply w-1/2 py-2 rounded-bl-md;
+}
+
+.apple-eq {
+    @apply rounded-br-md;
+}
