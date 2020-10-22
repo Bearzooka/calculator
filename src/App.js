@@ -4,14 +4,7 @@ import React from "react";
 import { Button } from "./Button";
 import { Screen } from "./Screen";
 import { ThemePick } from "./ThemePick";
-
-const keyboardButtons = [
-  ["AC", "±", "%", "÷"],
-  [7, 8, 9, "x"],
-  [4, 5, 6, "-"],
-  [1, 2, 3, "+"],
-  [0, ",", "="],
-];
+import { KEYBOARD_BUTTONS } from "./constants";
 
 const calcStates = {
   NEW: "new",
@@ -30,7 +23,7 @@ function App() {
   const [secondOperand, setSecondOperand] = React.useState(0);
   const [total, setTotal] = React.useState(0);
 
-  const themes = ["basic", "apple"]
+  const themes = ["basic", "apple"];
   const [theme, setTheme] = React.useState("basic");
 
   function handleNumber(number) {
@@ -149,12 +142,11 @@ function App() {
   }
 
   function themeChange(theme) {
-
     console.log("Selection on the app side." + theme);
     setTheme(theme);
   }
 
-  const keyboard = keyboardButtons.map((row) => (
+  const keyboard = KEYBOARD_BUTTONS.map((row) => (
     <div
       className={`${
         theme === "apple"
@@ -163,47 +155,55 @@ function App() {
       } w-full`}
       key={row}
     >
-      {row.map((button) => (
-        <Button
-          buttonClass={`${
-            isNaN(button) && button !== ","
-              ? theme + "-btn-fn"
-              : theme + "-btn"
-          }
-          ${["AC", "±", "%"].includes(button) ? theme + "-btn-top" : " "}
-          ${button === 0 ? theme + "-0" : " "}
-          ${button === "=" ? theme + "-eq" : " "}`}
-          content={button}
-          key={button.toString()}
-          onClick={() => handleClick(button)}
-        ></Button>
-      ))}
+      {row.map((button) => {
+        const themeButton =
+          isNaN(button) && button !== "," ? theme + "-btn-fn" : theme + "-btn";
+        const themeZero = button === 0 ? theme + "-0" : " ";
+        const themeTopRow = ["AC", "±", "%"].includes(button)
+          ? theme + "-btn-top"
+          : " ";
+        const themeEqual = button === "=" ? theme + "-eq" : " ";
+        return (
+          <Button
+            buttonClass={`
+            ${themeButton}
+            ${themeTopRow}
+            ${themeZero}
+            ${themeEqual}
+          `}
+            content={button}
+            key={button.toString()}
+            onClick={() => handleClick(button)}
+          ></Button>
+        );
+      })}
     </div>
   ));
+
   return (
     <div className={theme + "-container container "}>
-    <div className="mt-10 mx-auto w-72 calculator">
-      <Screen value={screenValue} className={theme + "-screen"} />
-      <div
-        className={`${
-          theme === "apple"
-            ? "divide-y divide-gray-900"
-            : " divide-y-4 divide-white"
-        }`}
-      >
-        {keyboard}
+      <div className="mt-10 mx-auto w-72 calculator">
+        <Screen value={screenValue} className={theme + "-screen"} />
+        <div
+          className={`${
+            theme === "apple"
+              ? "divide-y divide-gray-900"
+              : " divide-y-4 divide-white"
+          }`}
+        >
+          {keyboard}
+        </div>
+        <div className="grid-rows-5">
+          <div>First operand: {firstOperand}</div>
+          <div>Second operand: {secondOperand}</div>
+          <div>Total: {total}</div>
+          <div>Calculator state: {calcState}</div>
+          <ThemePick
+            options={themes}
+            onChange={(theme) => themeChange(theme)}
+          />
+        </div>
       </div>
-      <div className="grid-rows-5">
-        <div>First operand: {firstOperand}</div>
-        <div>Second operand: {secondOperand}</div>
-        <div>Total: {total}</div>
-        <div>Calculator state: {calcState}</div>
-        <ThemePick
-          options={themes}
-          onChange={theme => themeChange(theme)}
-        />
-      </div>
-    </div>
     </div>
   );
 }
