@@ -18999,8 +18999,8 @@ video {
 
 .basic-container {
   --bg-opacity: 1;
-  background-color: #2d3748;
-  background-color: rgba(45, 55, 72, var(--bg-opacity));
+  background-color: #f7fafc;
+  background-color: rgba(247, 250, 252, var(--bg-opacity));
   width: 100%;
 }
 
@@ -19063,6 +19063,10 @@ video {
   vertical-align: middle;
   text-align: right;
   margin-bottom: 0.5rem;
+  --border-opacity: 1;
+  border-color: #e2e8f0;
+  border-color: rgba(226, 232, 240, var(--border-opacity));
+  border-width: 1px;
 }
 
 .basic-0 {
@@ -19076,11 +19080,11 @@ video {
 
 /* Apple Style */
 
-.basic-container {
+.apple-container {
   --bg-opacity: 1;
-  background-color: #f7fafc;
-  background-color: rgba(247, 250, 252, var(--bg-opacity));
-  width: 100%;
+  background-color: #cbd5e0;
+  background-color: rgba(203, 213, 224, var(--bg-opacity));
+  width: 25%;
 }
 
 .apple-btn {
@@ -19177,6 +19181,125 @@ video {
 
 .apple-eq {
   border-bottom-right-radius: 0.375rem;
+}
+
+.apple-container table{
+  --border-opacity: 1;
+  border-color: #feb2b2;
+  border-color: rgba(254, 178, 178, var(--border-opacity));
+  border-width: 2px;
+}
+
+/* iOS Style */
+
+.ios-container {
+  width: 66.666667%;
+}
+
+.ios-keyboard {
+  --bg-opacity: 1;
+  background-color: #1a202c;
+  background-color: rgba(26, 32, 44, var(--bg-opacity));
+  padding-left: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom-right-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.ios-btn {
+  --bg-opacity: 1;
+  background-color: #2d3748;
+  background-color: rgba(45, 55, 72, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 20%;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  border-radius: 9999px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.ios-btn:hover {
+  --bg-opacity: 1;
+  background-color: #4a5568;
+  background-color: rgba(74, 85, 104, var(--bg-opacity));
+}
+
+.ios-btn-fn, .ios-btn-top {
+  --bg-opacity: 1;
+  background-color: #ed8936;
+  background-color: rgba(237, 137, 54, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  border-radius: 9999px;
+  width: 20%;
+}
+
+.ios-btn-fn:hover, .ios-btn-top:hover {
+  --bg-opacity: 1;
+  background-color: #f6ad55;
+  background-color: rgba(246, 173, 85, var(--bg-opacity));
+}
+
+.ios-btn-top{
+  --bg-opacity: 1;
+  background-color: #a0aec0;
+  background-color: rgba(160, 174, 192, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  font-size: 1.5rem;
+}
+
+.ios-btn-top:hover {
+  --bg-opacity: 1;
+  background-color: #4a5568;
+  background-color: rgba(74, 85, 104, var(--bg-opacity));
+}
+
+.ios-screen {
+  font-size: 4rem;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  padding-left: 0.5rem;
+  padding-right: 2rem;
+  width: 100%;
+  font-weight: 200;
+  height: 5rem;
+  --bg-opacity: 1;
+  background-color: #1a202c;
+  background-color: rgba(26, 32, 44, var(--bg-opacity));
+  vertical-align: middle;
+  text-align: right;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
+.ios-0 {
+  width: 40%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: left;
+  margin-right: 0.75rem;
+}
+
+.ios-eq {
 }
 
 @media (min-width: 640px) {

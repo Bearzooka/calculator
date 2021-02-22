@@ -7,7 +7,7 @@
 /* Basic style */
 
 .basic-container {
-    @apply bg-gray-800 w-full;
+    @apply bg-gray-100 w-full;
 }
 
 .basic-btn {
@@ -29,6 +29,7 @@
 .basic-screen {
     @apply font-thin text-2xl text-gray-800 pl-2 pr-2 font-mono;
     @apply w-full h-10  bg-gray-200 align-middle text-right mb-2;
+    @apply border-gray-300 border;
 }
 
 .basic-0 {
@@ -41,8 +42,8 @@
 
 /* Apple Style */
 
-.basic-container {
-    @apply bg-gray-100 w-full;
+.apple-container {
+    @apply bg-gray-400 w-1/4;
 }
 
 .apple-btn {
@@ -85,4 +86,56 @@
 
 .apple-eq {
     @apply rounded-br-md;
+}
+
+.apple-container table{
+    @apply border-red-300 border-2; 
+}
+
+/* iOS Style */
+
+.ios-container {
+    @apply w-8/12;
+}
+
+.ios-keyboard {
+    @apply bg-gray-900 pl-5 py-3 rounded-b-md;
+}
+
+.ios-btn {
+    @apply bg-gray-800 text-white py-2 my-2 w-1/5 mx-1  rounded-full text-2xl text-center;
+  }
+
+.ios-btn:hover {
+    @apply bg-gray-700;
+}
+
+.ios-btn-fn, .ios-btn-top {
+    @apply bg-orange-500 text-white text-2xl py-2 mx-1 rounded-full w-1/5;
+}
+
+.ios-btn-fn:hover, .ios-btn-top:hover {
+    @apply bg-orange-400;
+}
+
+.ios-btn-top{
+    @apply bg-gray-500 text-black text-2xl;
+}
+
+.ios-btn-top:hover {
+    @apply bg-gray-700;
+}
+
+
+.ios-screen {
+    @apply text-6xl text-white pl-2 pr-8;
+    @apply w-full font-thin h-20  bg-gray-900 align-middle text-right rounded-t-md;
+}
+
+.ios-0 {
+    @apply w-2/5 py-2 px-4 text-left mr-3;
+}
+
+.ios-eq {
+    @apply ;
 }

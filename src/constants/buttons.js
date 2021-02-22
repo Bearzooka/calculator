@@ -6,4 +6,12 @@ const KEYBOARD_BUTTONS = [
     [0, ",", "="],
   ];
 
-export {KEYBOARD_BUTTONS}
+const QWERTY_BUTTONS = [
+    ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+    ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+    ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+    ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+    ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+  ];
+
+export {KEYBOARD_BUTTONS, QWERTY_BUTTONS}
